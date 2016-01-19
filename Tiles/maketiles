@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ -z "$1" ] ; then
+	tilesrc="smooth.png"
+else
+	tilesrc="$1"
+fi
+
+tilewidth=64
+tileheight=88
+tilemax=42
+
+tilenum=0
+while [ $tilenum -lt $tilemax ] ; do
+	tilex=$((tilewidth * tilenum))
+	convert ${tilesrc} -crop "${tilewidth}x${tileheight}+${tilex}+0" "unlit_${tilenum}.png"
+	convert ${tilesrc} -crop "${tilewidth}x${tileheight}+${tilex}+88" "lit_${tilenum}.png"
+	tilenum=$((tilenum + 1))
+done
+
