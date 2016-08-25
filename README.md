@@ -1,4 +1,5 @@
-# mahjong-solitaire
+# Mahjong Solitaire
+
 Mahjong Solitaire (One of my first coding projects).
 
 Dug this baby up from the nether-regions of my old HD and thought I'd post it to GitHub (so the world can judge my newbie programming skills).
